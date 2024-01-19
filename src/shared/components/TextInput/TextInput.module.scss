@@ -1,0 +1,47 @@
+.root {
+  font-size: 15px;
+  width: 100%;
+
+  .inputLabel {
+    color: #A2A7B9;
+    font-size: 14px;
+    white-space: nowrap;
+    transform: translate(12px, 9px) scale(0.75);
+  }
+
+  .input {
+    padding: 23px 12px 6px;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+  }
+
+  // MUI applies classes to both input element and its wrapper
+  .inputWrapper {
+    font-size: 15px;
+    border-radius: 8px;
+    background-color:  #1D1A28;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    &.focused:not(input) {
+      background-color: rgba(255, 255, 255, 0.09);
+    }
+
+    &.adornedEnd {
+      padding-right: 9px;
+    }
+
+    &.adornedStart {
+      padding-left: 9px;
+    }
+
+    &.error {
+      border-color: #ff4114;
+    }
+  }
+}

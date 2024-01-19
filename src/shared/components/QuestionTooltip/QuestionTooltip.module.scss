@@ -1,0 +1,22 @@
+.tooltipIconWrapper {
+  display: flex;
+  align-items: center;
+
+  width: 16px;
+  height: 16px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 5px;
+
+  font-weight: bold;
+}
+
+.titleIcon {
+  width: 19px;
+  height: 19px;
+  margin-right: 4px;
+}

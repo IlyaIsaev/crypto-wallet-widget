@@ -1,0 +1,78 @@
+.root {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+
+  &.reversed {
+    direction: rtl;
+
+    .label {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &.fullWidth {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .checkbox {
+    display: none;
+
+    &:checked {
+      & + .switch {
+        background-color: #0078ff;
+
+        &::after {
+          background-color: #fff;
+          transform: translateX(18px);
+        }
+      }
+
+      & ~ .label {
+        color: #fff;
+      }
+    }
+
+    &:disabled {
+      & + .switch {
+        border: 1px solid rgba(79, 79, 85, 0.5);
+        background-color: transparent;
+
+        &::after {
+          background-color: #515152;
+          bottom: 2px;
+        }
+      }
+    }
+  }
+
+  .switch {
+    position: relative;
+    width: 42px;
+    height: 24px;
+    transition: 0.4s;
+    border-radius: 12px;
+    background-color: #4f4f55;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      left: 3px;
+      bottom: 3px;
+      transition: 0.4s;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  .label {
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 10px;
+  }
+}

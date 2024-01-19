@@ -1,0 +1,185 @@
+.root {
+  font-size: 12px;
+  line-height: 1.2;
+  border-radius: 8px;
+  background: #2b273b;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.body {
+  margin: 8px 0 8px;
+}
+
+.row {
+  display: grid;
+  height: 36px;
+  border-bottom: 1px solid #a2a7b9;
+  align-items: center;
+  grid-template-columns: 20% 47% 33%;
+
+  &__col {
+    padding-right: 16px;
+
+    &:last-of-type {
+      padding-right: 0px;
+    }
+  }
+
+  &._h_auto {
+    height: auto;
+  }
+
+  &._bb_none {
+    border-bottom: none;
+  }
+
+  &._validationError {
+    color: #f96c5a;
+  }
+}
+
+.percentage_box {
+  width: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 0;
+
+  &:after {
+    content: "%";
+  }
+}
+
+.target_price {
+  display: flex;
+  align-items: baseline;
+}
+
+.amount_to_sell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accented_text {
+  color: #fff;
+}
+
+.truncated_text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delete_profit_target_button {
+  $backgroudColor: #a2a7b9;
+  $fillColor: #565861;
+
+  border-radius: 100%;
+  background-color: $backgroudColor;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  background-clip: content-box;
+  transition: all 0.1s easy-out;
+
+  &:hover {
+    background-color: $fillColor;
+
+    .delete_profit_target_button__icon {
+      fill: $backgroudColor;
+    }
+  }
+
+  &:active {
+    background-color: $backgroudColor;
+
+    .delete_profit_target_button__icon {
+      fill: $fillColor;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: $fillColor;
+    transition: all 0.1s easy-out;
+  }
+}
+
+.accented_text_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  &__dashed {
+    border-bottom: 1px dashed rgba(129, 140, 153, 0.2);
+    flex-grow: 1;
+  }
+}
+
+.alert_notice {
+  color: #f96c5a;
+  border: 1px solid;
+  border-radius: 8px;
+  border: 1px solid #333545;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+}
+
+.alerts {
+  margin: 0 0 8px;
+}
+
+.footer_actions {
+  margin: 0 0 8px;
+}
+
+.footer {
+  margin: 24px 0 0;
+}
+
+.take_profit_input {
+  color: #fff;
+  border: none;
+  background: transparent;
+  max-width: 100%;
+
+  &._currency {
+    max-width: 65px;
+    text-align: right;
+  }
+
+  &._validationError {
+    color: #f96c5a;
+  }
+}
+
+input[type="number"] {
+  outline: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  -moz-appearance: textfield;
+}

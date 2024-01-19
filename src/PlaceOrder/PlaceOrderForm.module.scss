@@ -1,0 +1,27 @@
+.root {
+  background-color: #221F2F;
+  border-radius: 8px;
+  padding: 10px;
+  color: #A2A7B9;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  margin-bottom: 12px;
+}
+
+.content {
+  display: grid;
+  row-gap: 16px;
+}
+
+.submit {
+  margin: 16px 0 6px;
+}
